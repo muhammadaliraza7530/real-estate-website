@@ -98,7 +98,6 @@ const HeroCards = () => {
             key={index}
             icon={card.icon}
             title={card.title}
-            description={card.description}
             color={card.color}
             gradient={card.gradient}
           />
