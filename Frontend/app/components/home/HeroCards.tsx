@@ -1,4 +1,3 @@
-// frontend/src/components/home/HeroCards.tsx
 'use client';
 
 import { 
@@ -12,12 +11,11 @@ import {
 interface ServiceCardProps {
   icon: React.ElementType;
   title: string;
-  description: string;
   color: string;
   gradient: string;
 }
 
-const ServiceCard = ({ icon: Icon, title, description, color, gradient }: ServiceCardProps) => {
+const ServiceCard = ({ icon: Icon, title, color, gradient }: ServiceCardProps) => {
   return (
     <div className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
       {/* Background Gradient Effect */}
@@ -35,14 +33,9 @@ const ServiceCard = ({ icon: Icon, title, description, color, gradient }: Servic
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
           {title}
         </h3>
-
-        {/* Description */}
-        <p className="text-gray-600 text-sm leading-relaxed mb-4">
-          {description}
-        </p>
 
         {/* Learn More Link */}
         <button className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm group-hover:gap-3 transition-all">
@@ -64,28 +57,24 @@ const HeroCards = () => {
       title: 'Find Your Dream Home',
       color: 'bg-gradient-to-br from-blue-500 to-blue-600',
       gradient: 'from-blue-500 to-indigo-500',
-      buttonText: 'Start Searching',
     },
     {
       icon: TrendingUp,
       title: 'Unlock Property Value',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-500 to-emerald-500',
-      buttonText: 'Analyze Value',
     },
     {
       icon: Settings,
       title: 'Effortless Property Management',
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-500 to-pink-500',
-      buttonText: 'Manage Now',
     },
     {
       icon: Brain,
       title: 'Smart Investments, Informed Decisions',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-500 to-red-500',
-      buttonText: 'Invest Smart',
     },
   ];
 
